@@ -1,4 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import RaisedButton from 'material-ui/RaisedButton';
+import TextField from 'material-ui/TextField';
 
 class FormCmp extends Component {
 
@@ -22,11 +24,13 @@ class FormCmp extends Component {
   }
 
   render() {
+    // <input type="text"  =>  <TextField
+    // <input type="submit"  =>  <RaisedButton 
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-          <input type="text" name="in" value={this.state.in} onChange={this.handleChange}/>
-          <input type="submit"/>
+          <TextField hintText="hint" floatingLabelText="floatingLabel" name="in" value={this.state.in} onChange={this.handleChange}/>
+          <RaisedButton type="submit" label="送信" primary={true}/>
         </form>
       </div>
     )

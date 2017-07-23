@@ -3,12 +3,19 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
-import { BrowserRouter as Router } from 'react-router-dom' // add
+import { BrowserRouter as Router } from 'react-router-dom' 
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import injectTapEventPlugin from 'react-tap-event-plugin';
 
-// add Router element
+injectTapEventPlugin();  // add
+
+
+// add MuiThemeProvider element
 ReactDOM.render(
     <Router>
+       <MuiThemeProvider>
         <App />
+       </MuiThemeProvider>
     </Router>,
 document.getElementById('root'));
 registerServiceWorker();
