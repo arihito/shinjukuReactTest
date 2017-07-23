@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import NumberCmp from './NumberCmp';
 import FormCmp from './FormCmp';
+import FetchCmp from './FetchCmp';
 
 class App extends Component {
 
@@ -9,6 +10,7 @@ class App extends Component {
         <div>
           <NumberCmp number="1"/>
           <FormCmp />
+          <FetchCmp />
         </div>
     )
   }
